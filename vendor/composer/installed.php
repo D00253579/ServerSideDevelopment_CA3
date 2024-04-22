@@ -1,9 +1,11 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
+
         'pretty_version' => '1.0.0+no-version-set',
         'version' => '1.0.0.0',
         'reference' => null,
+
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -413,6 +415,7 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
+
             'pretty_version' => '1.0.0+no-version-set',
             'version' => '1.0.0.0',
             'reference' => null,
@@ -764,7 +767,9 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0.0 || 2.0.0 || 3.0.0',
+
                 1 => '1.0|2.0',
+
             ),
         ),
         'psr/simple-cache' => array(
@@ -968,6 +973,7 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+
         'swiftmailer/swiftmailer' => array(
             'pretty_version' => 'v6.3.0',
             'version' => '6.3.0.0',

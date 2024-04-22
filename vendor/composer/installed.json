@@ -5507,6 +5507,7 @@
             "install-path": "../sebastian/version"
         },
         {
+
             "name": "swiftmailer/swiftmailer",
             "version": "v6.3.0",
             "version_normalized": "6.3.0.0",
@@ -5535,6 +5536,7 @@
             "suggest": {
                 "ext-intl": "Needed to support internationalized email addresses"
             },
+
             "time": "2021-10-18T15:26:12+00:00",
             "type": "library",
             "extra": {

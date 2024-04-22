@@ -1671,6 +1671,7 @@
             },
             "dist": {
                 "type": "zip",
+
                 "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a30bfe2e142720dfa990d0a7e573997f5d884215",
                 "reference": "a30bfe2e142720dfa990d0a7e573997f5d884215",
                 "shasum": ""
@@ -7801,6 +7802,7 @@
             "time": "2020-09-28T06:39:44+00:00"
         },
         {
+
             "name": "symfony/yaml",
             "version": "v6.0.19",
             "source": {
