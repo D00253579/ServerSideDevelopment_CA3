@@ -8,4 +8,11 @@ How to use carbon: https://www.digitalocean.com/community/tutorials/easier-datet
 
 Intialise database: php artisan migrate 
 php artisan db:seed --class=disneyStudiosSeeder
- php artisan db:seed --class=disneyCharactersSeeder
+php artisan db:seed --class=disneyCharactersSeeder
+
+Created our own style sheet called "MainStyles.css"
+Also using tailwind for css. 
+
+npm run watch for tailwind
+Creating my own tailwind colours by following the tailwind website: https://tailwindcss.com/docs/text-decoration-color 
+Colours are created in the tailwind.config.js file
