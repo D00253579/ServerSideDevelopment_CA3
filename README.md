@@ -1,13 +1,24 @@
-Studios: Walt Disney Animation studios Pixar Marvel Studios 20th Century Studios Lucasfilms Searchlight pictures
+# ServerSideDevelopment_CA3
 
-Seeding: https://laracoding.com/seeding-after-migrating-in-laravel/ Date: 20 Jan 2024 Author: Johan van den Broek
+studios
+Walt Disney Animation studios
+Pixar
+Marvel Studios
+20th Century Studios
+Lucasfilms
+Searchlight pictures
+
+
+Seeding: https://laracoding.com/seeding-after-migrating-in-laravel/ Date: 20 Jan 2024 Author: Johan van den Broek 
 
 How to use carbon: https://www.digitalocean.com/community/tutorials/easier-datetime-in-laravel-and-php-with-carbon Date: 7th may 2021 Author: Chris Sev
 
 3 pages: Home Page, Studio Page and character page, split them into sections and have a create character in character page.
 
-Intialise database: php artisan migrate 
+Intialise database
+php artisan migrate
 php artisan db:seed --class=disneyStudiosSeeder
+
 php artisan db:seed --class=disneyCharactersSeeder
 
 Created our own style sheet called "MainStyles.css"
@@ -16,3 +27,6 @@ Also using tailwind for css.
 npm run watch for tailwind
 Creating my own tailwind colours by following the tailwind website: https://tailwindcss.com/docs/text-decoration-color 
 Colours are created in the tailwind.config.js file
+
+Authentication: https://www.youtube.com/playlist?list=PLDc9bt_00KcJvM4-KJF8OPadbOod_G7Wf 2/5
+Default: https://laravel.com/docs/11.x/migrations#main-content 2/5

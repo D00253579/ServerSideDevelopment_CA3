@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+                                                                                                 //Calling middleware
+Route::get('auth/home', [App\Http\Controllers\Auth\HomeController::class, 'index'])->name('auth.home')->middleware('isAdmin');
+Route::get('user/home', [App\Http\Controllers\User\HomeController::class, 'index'])->name('user.home');
