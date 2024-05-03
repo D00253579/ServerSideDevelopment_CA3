@@ -80,8 +80,6 @@
 
                         <div class="p-6 ">
                             <div class="flex items-center">
-                               
-
                             </div>
 
                             <div class="ml-12">

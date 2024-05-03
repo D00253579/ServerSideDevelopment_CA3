@@ -5,22 +5,21 @@
 @extends('layouts.app')
 
 @section('content')
-<body>
-<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10 bg-lightBlue border-double border-indigo-300">
-    <div class="flex">
-        <div class="w-full">
-            <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
-
-                <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                    {{ __('Login') }}
+<body style="background-image:url('Images/upImage.jpg')">
+<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10 bg-lightBlue">
+    <div class="flex bg-lightBlue sm:rounded">
+        <div class="w-full sm:rounded">
+            <section class="flex flex-col break-words bg-lightBlue border-double border-indigo-300 sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
+                <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md pl-8 flex justify-center">
+                  <img src="Images/loginTitle.png" alt="Login Title Image" height="80" width="100">                    
                 </header>
 
                 <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST" action="{{ route('login') }}">
                     @csrf
 
                     <div class="flex flex-wrap">
-                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
-                            {{ __('E-Mail Address') }}:
+                        <label for="email" class="block text-darkBlue text-sm font-bold mb-2 sm:mb-4">
+                            {{ __('Email Address') }}:
                         </label>
 
                         <input id="email" type="email"
@@ -35,7 +34,7 @@
                     </div>
 
                     <div class="flex flex-wrap">
-                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="password" class="block text-darkBlue text-sm font-bold mb-2 sm:mb-4">
                             {{ __('Password') }}:
                         </label>
 
@@ -58,7 +57,7 @@
                         </label>
 
                         @if (Route::has('password.request'))
-                        <a class="text-sm text-blue-500 hover:text-blue-700 whitespace-no-wrap no-underline hover:underline ml-auto"
+                        <a class="text-sm text-blue-500 hover:text-red whitespace-no-wrap no-underline hover:underline ml-auto"
                             href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
                         </a>
