@@ -27,19 +27,28 @@
 
                     </a>
                 </div>
-                <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
+                <nav class="bg-indigo-300 w-full h-20 hidden fixed top-0 right-0 px-6 py-4 sm:block sm:justify-between items-center">
+                    <div class="flex items-center">
+                        <div>
+                    <img src="Images\DisneyIcon.png" width="100" height="40" alt="Logo">
+                        </div>
+                        <div>
+                    <img src="Images\DisneyTitle.png" width="250" height="100" alt="Disney Title">
+    
+                        </div> 
+    
                     @guest
-                        <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="no-underline hover:underline hidden fixed top-0 right-0 px-28 py-4 sm:block bg-indigo-300" href="{{ route('login') }}">{{ __('LOGIN') }}</a>
                         @if (Route::has('register'))
-                            <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="no-underline hover:underline hidden fixed top-0 right-8 py-4 sm:block bg-indigo-300" href="{{ route('register') }}">{{ __('REGISTER') }}</a>
                         @endif
                     @else
                         <span>{{ Auth::user()->name }}</span>
 
                         <a href="{{ route('logout') }}"
-                           class="no-underline hover:underline"
+                           class="no-underline hover:underline sm:block bg-indigo-300"
                            onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                                document.getElementById('logout-form').submit();">{{ __('LOGOUT') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             {{ csrf_field() }}
                         </form>

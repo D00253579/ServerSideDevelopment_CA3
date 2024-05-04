@@ -1,21 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">
-    <div class="flex">
-        <div class="w-full">
-            <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
-
-                <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                    {{ __('Register') }}
-                </header>
+<body style="background-image:url('Images/upImage.jpg')" class="bg-cover bg-fixed overflow-hidden">
+    <main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10 bg-lightBlue sm:rounded">
+        <div class="flex bg-lightBlue sm:rounded">
+        <div class="w-full sm:rounded ">
+            <section class="flex flex-col break-words bg-lightBlue border-double border-indigo-300 sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg ">
+                <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md pl-8 flex justify-center">
+                    <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
+                        <img src="Images/registerTitle.png" alt="Login Title Image" height="100" width="120">                    
+                    </a>
+                    </header>
 
                 <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST"
                     action="{{ route('register') }}">
                     @csrf
 
                     <div class="flex flex-wrap">
-                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="name" class="block text-darkBlue font-serif text-sm font-bold mb-2 sm:mb-4">
                             {{ __('Name') }}:
                         </label>
 
@@ -30,7 +32,7 @@
                     </div>
 
                     <div class="flex flex-wrap">
-                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="email" class="block text-darkBlue font-serif text-sm font-bold mb-2 sm:mb-4">
                             {{ __('E-Mail Address') }}:
                         </label>
 
@@ -46,7 +48,7 @@
                     </div>
 
                     <div class="flex flex-wrap">
-                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="password" class="block font-serif text-darkBlue text-sm font-bold mb-2 sm:mb-4">
                             {{ __('Password') }}:
                         </label>
 
@@ -62,7 +64,7 @@
                     </div>
 
                     <div class="flex flex-wrap">
-                        <label for="password-confirm" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="password-confirm" class="block font-serif text-darkBlue text-sm font-bold mb-2 sm:mb-4">
                             {{ __('Confirm Password') }}:
                         </label>
 
@@ -72,7 +74,7 @@
 
                     <div class="flex flex-wrap">
                         <button type="submit"
-                            class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
+                            class="sparkle-button mt-8 font-serif text-white w-50 ml-40">
                             {{ __('Register') }}
                         </button>
 
