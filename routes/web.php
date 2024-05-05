@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\ShowUsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +21,4 @@ Auth::routes();
                                                                                                  //Calling middleware
 Route::get('auth/home', [App\Http\Controllers\Auth\HomeController::class, 'index'])->name('auth.home')->middleware('isAdmin');
 Route::get('user/home', [App\Http\Controllers\User\HomeController::class, 'index'])->name('user.home');
+Route::resource('auth/home', ShowUsersController::class);
