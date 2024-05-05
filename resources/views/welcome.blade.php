@@ -31,7 +31,7 @@
                           </a>
                         </div>   
                     <div class="ml-72 space-x-16">
-                            <a href="{{ url('/home') }}" class="text-2xl text-white font-serif">Home</a>
+                            <a href="{{ url('/') }}" class="text-2xl text-white font-serif">Home</a>
                             <a href="{{ url('/characters') }}" class="text-2xl text-white font-serif">Characters</a> 
                             <a href="{{ url('/studios') }}" class="text-2xl text-white font-serif">Studios</a>
                 </div>
