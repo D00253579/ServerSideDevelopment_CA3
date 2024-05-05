@@ -38,7 +38,17 @@
             
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block bg-indigo-300">
+                  {{-- Check if user is authenticated --}}
                     @auth
+                    <span>{{ Auth::user()->name }}</span>
+
+                        <a href="{{ route('logout') }}"
+                           class="no-underline hover:underline sm:block bg-indigo-300"
+                           onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">{{ __('LOGOUT') }}</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                            {{ csrf_field() }}
+                        </form>
                         @else
                         <a href="{{ route('login') }}" class="text-base text-darkBlue font-serif">LOGIN</a>
 

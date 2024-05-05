@@ -20,7 +20,7 @@ class isAdmin
         if(auth()->check()){
 
             //checking the integer in the isAdmin column of the user table to see if the user is an admin.
-            if(auth()->user()->isAdmin ==1){
+            if(auth()->user()->isAdmin == 1){
                 return $next($request);
 
             }else{

@@ -38,9 +38,9 @@
                         </div> 
     
                     @guest
-                        <a class="no-underline hover:underline hidden fixed top-0 right-0 px-28 py-4 sm:block bg-indigo-300" href="{{ route('login') }}">{{ __('LOGIN') }}</a>
+                        <a class="no-underline hover:underline hidden fixed top-0 right-0 px-28 py-4 sm:block bg-indigo-300" href="{{ route('login') }}">{{ __('Login') }}</a>
                         @if (Route::has('register'))
-                            <a class="no-underline hover:underline hidden fixed top-0 right-8 py-4 sm:block bg-indigo-300" href="{{ route('register') }}">{{ __('REGISTER') }}</a>
+                            <a class="no-underline hover:underline hidden fixed top-0 right-8 py-4 sm:block bg-indigo-300" href="{{ route('register') }}">{{ __('Register') }}</a>
                         @endif
                     @else
                         <span>{{ Auth::user()->name }}</span>
@@ -48,7 +48,7 @@
                         <a href="{{ route('logout') }}"
                            class="no-underline hover:underline sm:block bg-indigo-300"
                            onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">{{ __('LOGOUT') }}</a>
+                                document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             {{ csrf_field() }}
                         </form>
