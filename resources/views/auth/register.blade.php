@@ -10,6 +10,7 @@
                     <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
                         <img src="Images/registerTitle.png" alt="Login Title Image" height="100" width="120">                    
                     </a>
+                    {{ __('Register') }}
                     </header>
 
                 <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST"
