@@ -21,6 +21,28 @@
                     You are logged in as administrator!
                 </p>
             </div>
+            <div>
+            @if (Auth::check())
+            <table>
+                <tr>
+                <th>Name</th> 
+                <th>Email</th> 
+                <th>User Type</th>    
+                </tr> 
+             @foreach ($users as $user)
+            <tr>
+            <td>{{ $user->name }}</td> 
+            <td>{{ $user->email }}</td>
+            @if ($user->isAdmin==1)
+            <td>Admin</td>
+            @else
+            <td>User</td>     
+            @endif     
+            </tr> 
+            </table>   
+             @endforeach   
+            @endif
+        </div>
         </section>
     </div>
 </main>
