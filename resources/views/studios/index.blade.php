@@ -61,16 +61,18 @@
             </nav>
 
             <body class="antialiased">
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+                <div class="grid-cols-2 grid grid-rows-10">
                 @foreach ($studios as $studio)
+                <div class="text-center">
                 <div>
-                    <img src="{{ asset('Images/' . $studio->studioName . '.jpg') }}" alt="">
+                    <img src="{{ asset('Images/' . $studio->studioName . '.jpg') }}" alt="" height="500" width="500" class="rounded-md">
                 </div>
-                <p>{{ $studio->studioName }}</p>
-                <h3>{{ $studio->founded }}</h3>
-                <h3>{{ $studio->president }}</h3>
-                <h4>{{ $studio ->location }}</h4>    
-                </div>    
+                <p class="text-lg text-darkBlue font-serif uppercase underline">{{ $studio->studioName }}</p>
+                <h3 class="text-base font-serif">Founded In: {{ $studio->founded }}</h3>
+                <h3 class="text-base font-serif">Studio President: {{ $studio->president }}</h3>
+                <h4 class="text-base font-serif">Location: {{ $studio ->location }}</h4>    
+                </div> 
+                </div>
                 @endforeach
             </div>
         </div>
