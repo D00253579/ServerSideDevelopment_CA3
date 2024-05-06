@@ -100,8 +100,8 @@
                 </div>
                 <div class="sp">
 
-                    <button class="sparkle-button mt-8">
-                        <a href="{{ ('studios') }}" class="text-2xl text-white font-serif"></a>
+                    
+                        <a href="{{ ('studios') }}" class="sparkle-button mt-8">
                         <span class="spark"></span>
                       
                       <span class="backdrop"></span>
@@ -111,7 +111,7 @@
                         <path d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="text">Discover Studios</span>
-                    </button>
+                    </a>
                     <div class="bodydrop"></div>
                     <span aria-hidden="true" class="particle-pen">
                       <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -207,8 +207,8 @@
                 </div>
                 <div class="sp">
 
-                  <button class="sparkle-button mt-8">
-                      <a href="{{ url('/characters') }}" class="text-2xl text-white font-serif"></a>
+                  
+                      <a href="{{ url('/characters') }}" class="sparkle-button mt-8">
                       <span class="spark"></span>
                     
                     <span class="backdrop"></span>
@@ -218,7 +218,7 @@
                       <path d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                     <span class="text">Discover Characters</span>
-                  </button>
+                  </a>
                   <div class="bodydrop"></div>
                   <span aria-hidden="true" class="particle-pen">
                     <svg class="particle" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
