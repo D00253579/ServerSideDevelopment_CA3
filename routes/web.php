@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudioController;
+use App\Http\Controllers\CharacterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +24,4 @@ Auth::routes();
 Route::get('auth/home', [App\Http\Controllers\Auth\HomeController::class, 'index'])->name('auth.home')->middleware('isAdmin');
 Route::get('user/home', [App\Http\Controllers\User\HomeController::class, 'index'])->name('user.home');
 Route::resource('/studios', StudioController::class);
+Route::resource('/characters', CharacterController::class);
