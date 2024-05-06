@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Disney Magic</title>
+        <title>Disney Studios</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -71,7 +71,6 @@
                 <h3>{{ $studio->president }}</h3>
                 <h4>{{ $studio ->location }}</h4>    
                 </div>    
-            </div>
                 @endforeach
             </div>
         </div>
