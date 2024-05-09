@@ -13,7 +13,8 @@
         <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
             <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                Dashboard
+            <img src="Images/dashboardTitle.png" height="80" width="100" alt="Dashboard title">
+            <img src="Images/dashboardIcon.png" height="30" width="50" alt="Dashboard Icon">
             </header>
 
             <div class="w-full p-6">

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Disney Studios</title>
+        <title>Disney Characters</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     </head>
         <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
-        
                 <nav class="bg-indigo-300 w-full h-20 hidden fixed top-0 right-0 px-6 py-4 sm:block sm:justify-between items-center">
                     <div class="flex items-center">
                         <div>
@@ -27,6 +26,10 @@
                         <a href="{{ url('/') }}" class="text-2xl text-white font-serif">Home</a>
                         <a href="{{ url('/characters') }}" class="text-2xl text-white font-serif">Characters</a> 
                             <a href="{{ url('/studios') }}" class="text-2xl text-white font-serif">Studios</a>
+
+                            @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
+                            <a href="{{ url('/auth/home') }}" class="text-2xl text-white font-serif">Users</a>
+                            @endif
                 </div>
             
             @if (Route::has('login'))
@@ -52,26 +55,35 @@
                 </div>
             @endif
             </nav>
-            <body class="antialiased">
-                <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+            <body class="antialiased mt-32">
+                <div class="grid grid-cols-2 gap-16">
                     @foreach ($characters as $character)
+                    <div class="character-content">
+                        <div class="text-center">
                     <div>
-                        <img src="{{ asset('Images/' . $character->image_path) }}" alt="" height="500" width="500" class="rounded-md">
+                        <img src="{{ asset('Images/' . $character->image_path) }}" alt="" height="400" width="400" class="rounded-md mt-8 ml-8 mr-8">
                     </div>
-                    <p>{{ $character->characterName }}</p>
-                    <h3>{{ $character->characterType }}</h3>
-                    <h3>{{ $character->movieName }}</h3>
-                    <h4>{{ $character ->characterQuote }}</h4> 
+                    <p class="text-lg text-darkBlue font-serif uppercase underline font-bold">{{ $character->characterName }}</p>
+                    <h3 class="text-base font-serif">Character Type: {{ $character->characterType }}</h3>
+                    <h3 class="text-base font-serif">Movie: {{ $character->movieName }}</h3>
+                    <h4 class="quote text-base font-serif mb-8 italic">"{{ $character ->characterQuote }}"</h4>  
                     {{-- Checks if user exists and that it is an Admin  --}}
                     @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
-                 <a class="editButton" href="/characters/{{ $character->characterName }}/edit">Edit</a>   
+                    <div class="admin-user-controls">
+                    <a class="editButton bg-lightGreen" href="/characters/{{ $character->characterName }}/edit">
+                        <img src="Images\pencil.png" alt="edit icon" width="30" height="50">
+                    </a>   
                 <form action="/characters/{{ $character->characterName }}" method="POST">
                 @csrf
                 @method('delete')
-                <button class='editButton' type="submit">Delete</button>
+                <button class='deleteButton bg-lightRed' type="submit">
+                    <img src="Images\bin.png" alt="delete icon" width="30" height="50">
+                </button>
                 </form>
+                    </div>
                  @endif   
                     </div>    
+                    </div>
                     @endforeach
                 </div>
             </div>
