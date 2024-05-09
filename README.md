@@ -8,7 +8,6 @@ Marvel Studios
 Lucasfilms
 Searchlight pictures
 
-
 Seeding: https://laracoding.com/seeding-after-migrating-in-laravel/ Date: 20 Jan 2024 Author: Johan van den Broek 
 
 How to use carbon: https://www.digitalocean.com/community/tutorials/easier-datetime-in-laravel-and-php-with-carbon Date: 7th may 2021 Author: Chris Sev
@@ -33,3 +32,5 @@ Colours are created in the tailwind.config.js file
 Authentication: https://www.youtube.com/playlist?list=PLDc9bt_00KcJvM4-KJF8OPadbOod_G7Wf 2/5
 Default: https://laravel.com/docs/11.x/migrations#main-content 2/5
 Date Input: https://stackoverflow.com/questions/50312332/inserting-date-value-into-date-field-using-laravel 8/5
+
+Sparkle button css: https://uiverse.io/JkHuger/fat-bat-0 

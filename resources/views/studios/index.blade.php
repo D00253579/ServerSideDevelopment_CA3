@@ -12,7 +12,6 @@
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     </head>
         <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
-        
                 <nav class="bg-indigo-300 w-full h-20 hidden fixed top-0 right-0 px-6 py-4 sm:block sm:justify-between items-center">
                     <div class="flex items-center">
                         <div>
@@ -27,6 +26,10 @@
                         <a href="{{ url('/') }}" class="text-2xl text-white font-serif">Home</a>
                         <a href="{{ url('/characters') }}" class="text-2xl text-white font-serif">Characters</a> 
                             <a href="{{ url('/studios') }}" class="text-2xl text-white font-serif">Studios</a>
+                            
+                            @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
+                            <a href="{{ url('/auth/home') }}" class="text-2xl text-white font-serif">Users</a>
+                            @endif
                 </div>
             
             @if (Route::has('login'))
@@ -53,25 +56,32 @@
             @endif
             </nav>
 
-            <body class="antialiased">
-                <div class="grid-cols-2 grid grid-rows-10">
+            <body class="antialiased mt-32">
+                <div class="grid grid-cols-2 gap-16">
                 @foreach ($studios as $studio)
+                <div class="studio-content">
                 <div class="text-center">
                 <div>
-                    <img src="{{ asset('Images/' . $studio->image_path) }}" alt="" height="500" width="500" class="rounded-md">
+                    <img src="{{ asset('Images/' . $studio->image_path) }}" alt="" height="400" width="400" class="rounded-md mt-8 ml-8 mr-8">
                 </div>
-                <p class="text-lg text-darkBlue font-serif uppercase underline">{{ $studio->studioName }}</p>
+                <p class="text-lg text-darkBlue font-serif uppercase underline font-bold">{{ $studio->studioName }}</p>
                 <h3 class="text-base font-serif">Founded In: {{ $studio->founded }}</h3>
                 <h3 class="text-base font-serif">Studio President: {{ $studio->president }}</h3>
-                <h4 class="text-base font-serif">Location: {{ $studio ->location }}</h4>
+                <h4 class="text-base font-serif mb-8">Location: {{ $studio ->location }}</h4>
                  {{--Checking if user exists and checking if user is an admin  --}}
                 @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
-                 <a class="editButton" href="/studios/{{ $studio->studioName }}/edit">Edit</a>   
+                <div class="admin-user-controls">
+                 <a class="editButton bg-lightGreen" href="/studios/{{ $studio->studioName }}/edit">
+                <img src="Images\pencil.png" alt="edit icon" width="30" height="50">
+                </a>   
                 <form action="/studios/{{ $studio->studioName }}" method="POST">
                 @csrf
                 @method('delete')
-                <button class='editButton' type="submit">Delete</button>
+                <button class='deleteButton bg-lightRed' type="submit">
+                    <img src="Images\bin.png" alt="delete icon" width="30" height="50">
+                </button>
                 </form>
+                </div>
                  @endif   
                 </div> 
                 </div>

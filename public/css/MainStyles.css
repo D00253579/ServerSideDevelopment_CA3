@@ -1,10 +1,6 @@
 body {
     font-family: 'Nunito', sans-serif;
     background-color: rgb(238 242 255);
-    /* background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    background-attachment: fixed; */
 }
 
 nav{
@@ -247,13 +243,33 @@ nav{
     translate: -25% -5%;
   }
 
-  .editButton{
-    border-radius: 20px;
-    padding:10px 30px;
-    background-color: purple;
-    color: white;
-    margin-top:30px;
+  .admin-user-controls{
+    display: flex;
+    align-items:center;
+    justify-content: center;
   }
+
+  .editButton, .deleteButton{
+    display: inline-block;
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+    /* margin-top:30px; */
+    cursor: pointer;
+  }
+
+  .deleteButton{
+    margin-left: 10px;
+  }
+
   .EditFields{
     padding: 5px;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Parisienne&family=Sofia&display=swap');
+
+.quote{
+  font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

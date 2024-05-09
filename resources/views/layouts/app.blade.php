@@ -43,6 +43,10 @@
                             <a href="{{ url('/') }}" class="text-2xl text-white font-serif">Home</a>
                             <a href="{{ url('/characters') }}" class="text-2xl text-white font-serif">Characters</a> 
                             <a href="{{ url('/studios') }}" class="text-2xl text-white font-serif">Studios</a>
+
+                            @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
+                            <a href="{{ url('/auth/home') }}" class="text-2xl text-white font-serif">Users</a>
+                            @endif
                 </div>
             
             @if (Route::has('login'))
