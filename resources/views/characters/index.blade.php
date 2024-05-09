@@ -61,7 +61,8 @@
                     <p>{{ $character->characterName }}</p>
                     <h3>{{ $character->characterType }}</h3>
                     <h3>{{ $character->movieName }}</h3>
-                    <h4>{{ $character ->characterQuote }}</h4>  
+                    <h4>{{ $character ->characterQuote }}</h4> 
+                    {{-- Checks if user exists and that it is an Admin  --}}
                     @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
                  <a class="editButton" href="/characters/{{ $character->characterName }}/edit">Edit</a>   
                 <form action="/characters/{{ $character->characterName }}" method="POST">
