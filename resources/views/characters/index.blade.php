@@ -67,6 +67,7 @@
                     <h3 class="text-base font-serif">Character Type: {{ $character->characterType }}</h3>
                     <h3 class="text-base font-serif">Movie: {{ $character->movieName }}</h3>
                     <h4 class="quote text-base font-serif mb-8 italic">"{{ $character ->characterQuote }}"</h4>  
+                    {{-- Checks if user exists and that it is an Admin  --}}
                     @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
                     <div class="admin-user-controls">
                     <a class="editButton bg-lightGreen" href="/characters/{{ $character->characterName }}/edit">

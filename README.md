@@ -34,3 +34,4 @@ Default: https://laravel.com/docs/11.x/migrations#main-content 2/5
 Date Input: https://stackoverflow.com/questions/50312332/inserting-date-value-into-date-field-using-laravel 8/5
 
 Sparkle button css: https://uiverse.io/JkHuger/fat-bat-0 
+Cascade: https://stackoverflow.com/questions/55677896/how-to-delete-a-foreign-key-constraint-in-laravel 9/5
