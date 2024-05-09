@@ -58,12 +58,16 @@
                 @foreach ($studios as $studio)
                 <div class="text-center">
                 <div>
-                    <img src="{{ asset('Images/' . $studio->studioName . '.jpg') }}" alt="" height="500" width="500" class="rounded-md">
+                    <img src="{{ asset('Images/' . $studio->image_path) }}" alt="" height="500" width="500" class="rounded-md">
                 </div>
                 <p class="text-lg text-darkBlue font-serif uppercase underline">{{ $studio->studioName }}</p>
                 <h3 class="text-base font-serif">Founded In: {{ $studio->founded }}</h3>
                 <h3 class="text-base font-serif">Studio President: {{ $studio->president }}</h3>
-                <h4 class="text-base font-serif">Location: {{ $studio ->location }}</h4>    
+                <h4 class="text-base font-serif">Location: {{ $studio ->location }}</h4>
+                 {{--Checking if user exists and checking if user is an admin  --}}
+                @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
+                 <a class="editButton" href="/studios/{{ $studio->studioName }}/edit">Edit</a>   
+                @endif   
                 </div> 
                 </div>
                 @endforeach

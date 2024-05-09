@@ -19,6 +19,8 @@ return new class extends Migration
             $table->date('founded');
             $table->string('president');
             $table->string('location');
+            $table->string('image_path');
+            $table->timestamps();
         });
     }
 

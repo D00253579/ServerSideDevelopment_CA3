@@ -21,6 +21,8 @@ php artisan db:seed --class=disneyStudiosSeeder
 php artisan db:seed --class=disneyCharactersSeeder
 php artisan db:seed --class=usersSeeder
 
+Password for users is: 123!"£QWEqwe
+
 Created our own style sheet called "MainStyles.css"
 Also using tailwind for css. 
 
@@ -30,3 +32,4 @@ Colours are created in the tailwind.config.js file
 
 Authentication: https://www.youtube.com/playlist?list=PLDc9bt_00KcJvM4-KJF8OPadbOod_G7Wf 2/5
 Default: https://laravel.com/docs/11.x/migrations#main-content 2/5
+Date Input: https://stackoverflow.com/questions/50312332/inserting-date-value-into-date-field-using-laravel 8/5

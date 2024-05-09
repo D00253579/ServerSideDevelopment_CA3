@@ -12,5 +12,6 @@ class DisneyStudios extends Model
     'founded',
     'president',
     'location',
+    'image_path'
     ];
 }
