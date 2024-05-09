@@ -101,7 +101,7 @@
                 <div class="sp">
 
                     
-                        <a href="{{ ('studios') }}" class="sparkle-button mt-8">
+                        <a href="{{ ('studios') }}" class="sparkle-button mt-8 w-64 ml-64">
                         <span class="spark"></span>
                       
                       <span class="backdrop"></span>
@@ -208,7 +208,7 @@
                 <div class="sp">
 
                   
-                      <a href="{{ url('/characters') }}" class="sparkle-button mt-8">
+                      <a href="{{ url('/characters') }}" class="sparkle-button mt-8 w-64  ml-64">
                       <span class="spark"></span>
                     
                     <span class="backdrop"></span>
