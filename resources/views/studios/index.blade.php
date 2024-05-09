@@ -67,7 +67,12 @@
                  {{--Checking if user exists and checking if user is an admin  --}}
                 @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
                  <a class="editButton" href="/studios/{{ $studio->studioName }}/edit">Edit</a>   
-                @endif   
+                <form action="/studios/{{ $studio->studioName }}" method="POST">
+                @csrf
+                @method('delete')
+                <button class='editButton' type="submit">Delete</button>
+                </form>
+                 @endif   
                 </div> 
                 </div>
                 @endforeach

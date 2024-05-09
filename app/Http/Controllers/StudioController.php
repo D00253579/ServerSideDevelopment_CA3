@@ -36,4 +36,8 @@ class StudioController extends Controller
             
             return redirect('/studios');
     }
+    public function destroy($studioName){
+        $studioName=disneyStudios::where('studioName',$studioName);
+        $studioName->delete();
+    }
 }
