@@ -56,12 +56,20 @@
                 <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                     @foreach ($characters as $character)
                     <div>
-                        <img src="{{ asset('Images/' . $character->characterName . '.jpg') }}" alt="">
+                        <img src="{{ asset('Images/' . $character->image_path) }}" alt="" height="500" width="500" class="rounded-md">
                     </div>
                     <p>{{ $character->characterName }}</p>
                     <h3>{{ $character->characterType }}</h3>
                     <h3>{{ $character->movieName }}</h3>
-                    <h4>{{ $character ->characterQuote }}</h4>    
+                    <h4>{{ $character ->characterQuote }}</h4>  
+                    @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
+                 <a class="editButton" href="/characters/{{ $character->characterName }}/edit">Edit</a>   
+                <form action="/characters/{{ $character->characterName }}" method="POST">
+                @csrf
+                @method('delete')
+                <button class='editButton' type="submit">Delete</button>
+                </form>
+                 @endif   
                     </div>    
                     @endforeach
                 </div>
