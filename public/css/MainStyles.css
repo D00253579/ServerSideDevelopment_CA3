@@ -247,4 +247,13 @@ nav{
     translate: -25% -5%;
   }
 
-  
+  .editButton{
+    border-radius: 20px;
+    padding:10px 30px;
+    background-color: purple;
+    color: white;
+    margin-top:30px;
+  }
+  .EditFields{
+    padding: 5px;
+  }

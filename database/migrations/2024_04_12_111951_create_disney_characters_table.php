@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('movieName');
             $table->string('characterQuote');
             $table->unsignedBigInteger('studio_id');
+            $table->string('image_path');
+            $table->timestamps();
             $table ->foreign ('studio_id')->references('id')-> on('disney_studios');
         });
     }

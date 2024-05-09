@@ -12,6 +12,7 @@ class disneyCharacters extends Model
         'characterType',
         'movieName',
         'characterQuote',
+        'image_path',
         'studio_id'
         ];
 }
