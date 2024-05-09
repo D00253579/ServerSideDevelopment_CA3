@@ -22,7 +22,8 @@ return new class extends Migration
             $table->unsignedBigInteger('studio_id');
             $table->string('image_path');
             $table->timestamps();
-            $table ->foreign ('studio_id')->references('id')-> on('disney_studios');
+            //What cascade does in our case is if the studio is deleted then the characters from that studio are deleted as well.
+            $table ->foreign ('studio_id')->references('id')-> on('disney_studios')->onDelete('cascade');
         });
     }
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\disneyStudios;
+use App\Models\disneyCharacters;
 class StudioController extends Controller
 {
     public function index()
@@ -37,7 +38,9 @@ class StudioController extends Controller
             return redirect('/studios');
     }
     public function destroy($studioName){
-        $studioName=disneyStudios::where('studioName',$studioName);
-        $studioName->delete();
+        
+            $studioName=disneyStudios::where('studioName',$studioName);
+            $studioName->delete();
+            return redirect('/studios');
     }
 }
