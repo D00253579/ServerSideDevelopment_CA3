@@ -1,3 +1,7 @@
+<link rel="stylesheet" type="text/css" href="{{ url('css/MainStyles.css') }}">
+<link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -12,10 +16,12 @@
 
         <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
+            <div class="dashboard-title-container">
             <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-            <img src="Images/dashboardTitle.png" height="80" width="100" alt="Dashboard title">
-            <img src="Images/dashboardIcon.png" height="30" width="50" alt="Dashboard Icon">
+            <img src="/Images/dashboardTitle.png" height="80" width="100" alt="Dashboard title">
+            <img src="/Images/dashboardIcon.png" height="30" width="50" alt="Dashboard Icon">
             </header>
+            </div>
 
             <div class="w-full p-6">
                 <p class="text-gray-700">

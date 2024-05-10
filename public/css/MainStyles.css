@@ -254,8 +254,12 @@ nav{
     border-radius: 50%;
     color: white;
     padding: 10px;
-    /* margin-top:30px; */
     cursor: pointer;
+  }
+
+  .editButton:hover, .deleteButton:hover{
+    background-color: white;
+    border: none;
   }
 
   .deleteButton{
@@ -264,6 +268,16 @@ nav{
 
   .EditFields{
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+  }
+
+  .edit-fields-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Parisienne&family=Sofia&display=swap');
@@ -272,4 +286,27 @@ nav{
   font-family: "Sofia", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.createButton{
+  display: inline-flex;
+  padding: 5px 30px;
+  border-radius: 20px;
+  color: #60648c;
+}
+
+.createButton:hover{
+ background-color: white;
+ border: none;
+ cursor: pointer;
+}
+
+.create-controls{
+  position: absolute;
+  top: 2.5px;
+  right: 30px;
+}
+
+.dashboard-title-container{
+  display: inline-flex;
 }
