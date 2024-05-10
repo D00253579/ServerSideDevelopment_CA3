@@ -35,3 +35,5 @@ Date Input: https://stackoverflow.com/questions/50312332/inserting-date-value-in
 
 Sparkle button css: https://uiverse.io/JkHuger/fat-bat-0 
 Cascade: https://stackoverflow.com/questions/55677896/how-to-delete-a-foreign-key-constraint-in-laravel 9/5
+Icon images are from: https://www.flaticon.com/free-icon/add_12937056?term=create&page=1&position=78&origin=search&related_id=12937056
+Disney Font is from: https://www.fontspace.com/category/disney 

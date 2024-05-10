@@ -13,6 +13,11 @@ class characterController extends Controller
         return view('characters.index')
             ->with('characters', disneyCharacters::orderBy('characterName', 'ASC')->get());
     }
+
+    public function create(){
+        return view('characters.create');
+    }
+
     public function edit($characterName){
         return view('characters.edit')
         ->with ('character',disneyCharacters::where('characterName',$characterName)->first());
