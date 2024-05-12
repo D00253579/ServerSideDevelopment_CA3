@@ -356,3 +356,16 @@ nav{
 .center{
   margin-left: 450px;
 }
+.userTable{
+  font-size: 25px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.userTableSecondRow{
+  grid-column: 2;
+  grid-row: 1;
+}
+.userTableThirdRow{
+  grid-column: 3;
+  grid-row: 1;
+}

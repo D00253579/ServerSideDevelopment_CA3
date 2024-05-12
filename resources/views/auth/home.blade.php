@@ -232,12 +232,20 @@
                         </div>
                     </div>
                     <div>
+                      <div class="w-4/5 m-auto flex justify-center">
+                        <div class="py-15">
+                            <h1 class="text-6xl">
+                                <img src="/Images/viewUsersTitle.png" alt="Update Title Image" height="150" width="250">
+                            </h1>
+                        </div>
+                    </div>
                       @if (Auth::check())
+                      <div class="userTable">
                       <table>
                           <tr>
                           <th>Name</th> 
-                          <th>Email</th> 
-                          <th>User Type</th>    
+                          <th class="userTableSecondRow">Email</th> 
+                          <th class="userTableThirdRow">User Type</th>    
                           </tr> 
                        @foreach ($users as $user)
                       <tr>
@@ -249,7 +257,8 @@
                       <td>User</td>     
                       @endif     
                       </tr> 
-                      </table>   
+                      </table>  
+                    </div> 
                        @endforeach   
                       @endif
                     </div>
