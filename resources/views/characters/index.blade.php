@@ -57,7 +57,7 @@
             </nav>
             <div class="create-controls">
                 @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
-                <a class="createButton bg-lightPink" href="/characters/create}"> 
+                <a class="createButton bg-lightPink" href="/characters/create"> 
                     <img src="Images\add.png" alt="Add Icon" width="30" height="50" class="mr-4">
                    <p class="text-lg font-serif uppercase font-bold mt-1">Create</p>
                 </a>

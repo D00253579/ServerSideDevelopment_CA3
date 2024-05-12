@@ -310,3 +310,37 @@ nav{
 .dashboard-title-container{
   display: inline-flex;
 }
+
+.addButton{
+  padding: 10px 30px;
+  border-radius: 20px;
+  background-color: #fbcfe8;
+  text-transform: uppercase;
+  color: #60648c;
+}
+
+.addButton:hover{
+  background-color: white;
+}
+
+.createField{
+  padding: 5px;
+  width: 450px;
+  text-align: center;
+}
+
+.createLabels{
+  text-align: center;
+  font-family: sans-serif;
+  color: #60648c;
+}
+
+.addImageField{
+  margin-left: 120px;
+}
+
+.addImageField > button{
+  background-color: #60648c;
+  color: white;
+  font-family: sans-serif;
+}
