@@ -240,26 +240,38 @@
                         </div>
                     </div>
                       @if (Auth::check())
-                      <div class="userTable">
+                      <div>
                       <table>
                           <tr>
-                          <th>Name</th> 
-                          <th class="userTableSecondRow">Email</th> 
-                          <th class="userTableThirdRow">User Type</th>    
+                          <th class="UserTableRow1 text-lg text-darkBlue font-serif uppercase underline font-bold">Name</th> 
+                          <th class="UserTableRow2 text-lg text-darkBlue font-serif uppercase underline font-bold">Email</th> 
+                          <th class="UserTableRow3 text-lg text-darkBlue font-serif uppercase underline font-bold">User Type</th>    
                           </tr> 
                        @foreach ($users as $user)
                       <tr>
-                      <td>{{ $user->name }}</td> 
-                      <td>{{ $user->email }}</td>
+                      <td class="UserTableRow1">{{ $user->name }}</td> 
+                      <td class="UserTableRow2">{{ $user->email }}</td>
                       @if ($user->isAdmin==1)
-                      <td>Admin</td>
+                      <td class="UserTableRow3">Admin</td>
                       @else
-                      <td>User</td>     
-                      @endif     
+                      <td class="UserTableRow3">User</td>     
+                      @endif
+                      <div class="admin-user-controls">
+                        <a class="editButton bg-lightGreen" href="/auth/{{ $user->name }}/edit">
+                            <img src="../Images/pencil.png" alt="edit icon" width="30" height="50">
+                        </a>   
+                    <form action="../auth/{{ $user->name }}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button class='deleteButton bg-lightRed' type="submit">
+                        <img src="../Images/bin.png" alt="delete icon" width="30" height="50">
+                    </button>
+                    </form>
+                        </div>       
                       </tr> 
+                      @endforeach   
                       </table>  
                     </div> 
-                       @endforeach   
                       @endif
                     </div>
                   </div>

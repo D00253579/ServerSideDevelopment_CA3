@@ -1,6 +1,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     background-color: rgb(238 242 255);
+    overflow-x: hidden;
 }
 
 nav{
@@ -358,14 +359,13 @@ nav{
 }
 .userTable{
   font-size: 25px;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
 }
-.userTableSecondRow{
-  grid-column: 2;
-  grid-row: 1;
+.UserTableRow1{
+  padding-left: 125px;
 }
-.userTableThirdRow{
-  grid-column: 3;
-  grid-row: 1;
+.UserTableRow2{
+  padding-left:350px;
+}
+.UserTableRow3{
+  padding-left: 430px;
 }
