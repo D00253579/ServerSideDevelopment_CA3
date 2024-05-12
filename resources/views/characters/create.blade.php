@@ -9,17 +9,6 @@
     </div>
 </div>
 
-{{-- Form Validation --}}
-{{-- @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-             @foreach ($errors->all() as $error)
-                <li class="text-red-500">{{ $error }}</li>
-             @endforeach   
-        </ul>
-    </div>    
-@endif --}}
-
 <div class=" flex justify-center">
 <form action="/characters" method="POST" enctype="multipart/form-data">
     @csrf
@@ -29,7 +18,7 @@
     <br>
 <input type="text" name="characterName" placeholder="Enter Character Name" class="createField @error('characterName') is-invalid @enderror">
 @error('characterName')
-<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+<div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
 @enderror
 <br>
 <br>
@@ -37,7 +26,7 @@
 <br>
 <input type="text" name="characterType" placeholder="Enter Character Type" class="createField">
 @error('characterType')
-<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+<div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
 @enderror
 <br>
 <br>
@@ -45,7 +34,7 @@
 <br>
 <input type="text" name="movieName" placeholder="Enter Movie Name" class="createField">
 @error('movieName')
-<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+<div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
 @enderror
 <br>
 <br>
@@ -53,7 +42,7 @@
 <br>
 <input type="text" name="characterQuote" placeholder="Enter Character Quote" class="createField">
 @error('characterQuote')
-<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+<div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
 @enderror
 <br>
 <br>
@@ -61,7 +50,7 @@
 <br>
 <input type="file" name="image_path" class="addImageField">
 @error('image_path')
-<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+<div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
 @enderror
 <br>
 <br>
@@ -77,7 +66,7 @@
 <option value="lucasFilms">Lucasfilms</option>
 </select>
 @error('studio')
-<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+<div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
 @enderror
 <br>
 <br>

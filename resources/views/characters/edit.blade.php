@@ -17,21 +17,33 @@
     <h2 class="createLabels">Character Name:</h2>
     <br>
     <textarea class='createField' name='characterName'>{{ $character->characterName }}</textarea>
+    @error('characterName')
+    <div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
+    @enderror
     <br>
     <br>
     <h2 class="createLabels">Character Type: </h2>
     <br>
     <textarea class='createField' name='characterType'>{{ $character->characterType }}</textarea>
+    @error('characterType')
+    <div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
+    @enderror
     <br>
     <br>
     <h2 class="createLabels">Movie Name: </h2>
     <br>
     <textarea class='createField' name="movieName" >{{ $character->movieName }}</textarea>
+    @error('movieName')
+    <div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
+    @enderror
     <br>
     <br>
     <h2 class="createLabels">Character Quote: </h2>
     <br>
     <textarea class='createField' name="characterQuote" >{{ $character->characterQuote }}</textarea>
+    @error('characterQuote')
+    <div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
+    @enderror
     <br>
     <br>
     <div class="flex justify-center mb-20">

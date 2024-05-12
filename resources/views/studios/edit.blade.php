@@ -17,21 +17,33 @@
     <h2 class="createLabels">Studio Name:</h2>
     <br>
     <textarea class='createField' name='studioName'>{{ $studio->studioName }}</textarea>
+    @error('studioName')
+    <div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
+    @enderror
     <br>
     <br>
     <h2 class="createLabels">Date it was founded:</h2>
     <br>
     <input type="date" class='createField' name="founded" value={{ $studio->founded }}>            
+    @error('founded')
+    <div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
+    @enderror
     <br>
     <br>
     <h2 class="createLabels">Current President:</h2>
     <br>
     <textarea class='createField' name="president" >{{ $studio->president }}</textarea>
+    @error('president')
+    <div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
+    @enderror
     <br>
     <br>
     <h2 class="createLabels">Location:</h2>
     <br>
     <textarea class='createField' name="location" >{{ $studio->location }}</textarea>
+    @error('location')
+    <div class="alert-alert danger text-red text-center italic">{{ $message }}*</div>
+    @enderror
     <br>
     <br>
     <div class="flex justify-center mb-20">

@@ -29,7 +29,7 @@
                             value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                         @error('email')
-                        <p class="text-red-500 text-xs italic mt-4">
+                        <p class="alert-alert danger text-red text-center italic">
                             {{ $message }}
                         </p>
                         @enderror
@@ -45,7 +45,7 @@
                             required>
 
                         @error('password')
-                        <p class="text-red-500 text-xs italic mt-4">
+                        <p class="alert-alert danger text-red text-center italic">
                             {{ $message }}
                         </p>
                         @enderror
@@ -59,20 +59,12 @@
                         </label>
 
                         @if (Route::has('password.request'))
-                        <a class="text-sm text-blue-500 hover:text-red whitespace-no-wrap no-underline hover:underline ml-auto"
+                        <a class="text-sm text-red hover:text-red whitespace-no-wrap no-underline hover:underline ml-auto"
                             href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
                         </a>
                         @endif
                     </div>
-
-                    {{-- button before i changed it --}}
-                     {{-- <div class="flex flex-wrap">
-                        <button type="submit"
-                        class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
-                            {{ __('Login') }}
-                        </button>  --}}
-
                      <div class="flex flex-wrap">
                         <button type="submit" class="sparkle-button mt-8 font-serif text-white w-50 ml-40">
                             {{ __('Login') }}
@@ -80,7 +72,7 @@
                         @if (Route::has('register'))
                         <p class="w-full text-xs text-center text-gray-700 my-6 sm:text-sm sm:my-8">
                             {{ __("Don't have an account?") }}
-                            <a class="text-blue-500 hover:text-blue-700 no-underline hover:underline" href="{{ route('register') }}">
+                            <a class="text-red hover:text-blue-700 no-underline hover:underline" href="{{ route('register') }}">
                                 {{ __('Register') }}
                             </a>
                         </p>
