@@ -33,6 +33,7 @@ Password for administrator and user in database
 ```
 
 ## References <br>
+For this project, we utilised seeding to provide default data in the database so that we could test constantly thorughout development. I used Johan van den Broek's(2024) seeding article to learn how to create seeders that can be run after migrating the tables. As we had a date field in our studios table I had to use Carbon to create a date in the seeder. I used Chris Sev's(2021) article on how to use Carbon properly. As we were creating our authentication for admin and for users I found a informative tutorial on youtube by Career Development Lab(2022) on how to create proper authentication using middleware to design our tasks for both admin and user. To make the authentication easier I read Laravel's(No date) documentation on the default attribute and assigned a 0 to users whenever they register so that the middleware can make the distinction between user and admin. I also read up on Stackoverflow(2023) on how to delete a studio while avoiding a foreign key constraint. I also found out about the date input type as well.
 ```
 Johan van den Broek. (2024) Seeding After Migrating in Laravel: Two Methods Compared [online]. Available at: https://laracoding.com/seeding-after-migrating-in-laravel/ [accessed 14 April 2024].
 
@@ -47,13 +48,6 @@ Stackoverflow (2023) Inserting Date Value into Date Field using Laravel [online]
 Stackoverflow (2023) How to delete a foreign key constraint in Laravel? [online]. Available at: https://stackoverflow.com/questions/55677896/how-to-delete-a-foreign-key-constraint-in-laravel [accessed 9 May 2024].
 ```
 
-Seeding: https://laracoding.com/seeding-after-migrating-in-laravel/ Date: 20 Jan 2024 Author: Johan van den Broek 
-
-How to use carbon: https://www.digitalocean.com/community/tutorials/easier-datetime-in-laravel-and-php-with-carbon Date: 7th may 2021 Author: Chris Sev
-
-3 pages: Home Page, Studio Page and character page, split them into sections and have a create character in character page.
-
-
 Created our own style sheet called "MainStyles.css"
 Also using tailwind for css. 
 
@@ -61,11 +55,6 @@ npm run watch for tailwind
 Creating my own tailwind colours by following the tailwind website: https://tailwindcss.com/docs/text-decoration-color 
 Colours are created in the tailwind.config.js file
 
-Authentication: https://www.youtube.com/playlist?list=PLDc9bt_00KcJvM4-KJF8OPadbOod_G7Wf 2/5
-Default: https://laravel.com/docs/11.x/migrations#main-content 2/5
-Date Input: https://stackoverflow.com/questions/50312332/inserting-date-value-into-date-field-using-laravel 8/5
-
 Sparkle button css: https://uiverse.io/JkHuger/fat-bat-0 
-Cascade: https://stackoverflow.com/questions/55677896/how-to-delete-a-foreign-key-constraint-in-laravel 9/5
 Icon images are from: https://www.flaticon.com/free-icon/add_12937056?term=create&page=1&position=78&origin=search&related_id=12937056
 Disney Font is from: https://www.fontspace.com/category/disney 
