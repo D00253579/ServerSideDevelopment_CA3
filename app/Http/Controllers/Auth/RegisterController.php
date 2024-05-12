@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -54,6 +55,24 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+    }
+
+    // Data Sanitisation:
+    // Converting the user email to lowercase before validation, 
+    // preparing email, name and password for form validation
+    public function prepareForValidation(){
+        $this->merge([
+            'email' => strtolower($this->email),
+            'name' => Str::name($this->name),
+            'password' => Str::password($this->password),
+        ]);
+    }
+
+    // Removing any spaces or special characters from user names, for data sanitisation
+    public function clean($name){
+        $name = str_replace(' ', '-', $name); // replacing all spaces with hyphens 
+        return preg_replace('/[^A-Za-z0-9\-]/', '', $name); // removing any special characters
+        echo clean;
     }
 
     /**

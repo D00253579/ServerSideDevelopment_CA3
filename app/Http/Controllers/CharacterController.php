@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\disneyCharacters;
+use Illuminate\Support\Str;
 
 class characterController extends Controller
 {
@@ -16,6 +17,20 @@ class characterController extends Controller
 
     public function create(){
         return view('characters.create');
+    }
+
+    /**
+     *  Preparing character data for validation - data sanitisation 
+     */
+    public function prepareForValidation(){
+        $this->merge(
+            [
+                'characterName' =>Str::characterName($this->characterName),
+                'characterType' => Str::characterType($this->characterType),
+                'movieName' => Str::movieName($this->movieName),
+                'characterQuote' => Str::characterQuote($this->characterQuote),            
+                ]
+            );
     }
 
     /**
