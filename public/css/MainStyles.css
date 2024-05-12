@@ -311,6 +311,7 @@ nav{
   display: inline-flex;
 }
 
+
 .addButton{
   padding: 10px 30px;
   border-radius: 20px;
@@ -343,4 +344,28 @@ nav{
   background-color: #60648c;
   color: white;
   font-family: sans-serif;
+
+.dashboardGrid{
+  width:100%;
+  padding:1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+.buttonGridFirst{
+  padding-left: 50px;
+}
+.buttonGridSecond{
+  grid-column: 2;
+  grid-row: 1;
+  padding-left: 90px;
+}
+.buttonGridThird{
+  padding-left: 90px;
+  grid-column: 3;
+  grid-row: 1;
+
+}
+.center{
+  margin-left: 420px;
 }
