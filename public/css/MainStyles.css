@@ -266,19 +266,6 @@ nav{
     margin-left: 10px;
   }
 
-  .EditFields{
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 450px;
-  }
-
-  .edit-fields-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
 
   @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Parisienne&family=Sofia&display=swap');
 
@@ -344,7 +331,7 @@ nav{
   background-color: #60648c;
   color: white;
   font-family: sans-serif;
-
+}
 .dashboardGrid{
   width:100%;
   padding:1.5rem;
@@ -367,5 +354,5 @@ nav{
 
 }
 .center{
-  margin-left: 420px;
+  margin-left: 450px;
 }
