@@ -8,6 +8,18 @@
         </h1>
     </div>
 </div>
+
+{{-- Form Validation --}}
+{{-- @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+             @foreach ($errors->all() as $error)
+                <li class="text-red-500">{{ $error }}</li>
+             @endforeach   
+        </ul>
+    </div>    
+@endif --}}
+
 <div class=" flex justify-center">
 <form action="/characters" method="POST" enctype="multipart/form-data">
     @csrf
@@ -15,27 +27,42 @@
         <br>
     <h2 class="createLabels">Character Name:</h2>
     <br>
-<input type="text" name="characterName" placeholder="Enter Character Name" class="createField">
+<input type="text" name="characterName" placeholder="Enter Character Name" class="createField @error('characterName') is-invalid @enderror">
+@error('characterName')
+<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+@enderror
 <br>
 <br>
-<h2 class="createLabels">Character Type: </h2>
+<h2 class="createLabels">Character Type:</h2>
 <br>
 <input type="text" name="characterType" placeholder="Enter Character Type" class="createField">
+@error('characterType')
+<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+@enderror
 <br>
 <br>
-<h2 class="createLabels">Movie Name: </h2>
+<h2 class="createLabels">Movie Name:</h2>
 <br>
 <input type="text" name="movieName" placeholder="Enter Movie Name" class="createField">
+@error('movieName')
+<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+@enderror
 <br>
 <br>
-<h2 class="createLabels">Character Quote: </h2>
+<h2 class="createLabels">Character Quote:</h2>
 <br>
 <input type="text" name="characterQuote" placeholder="Enter Character Quote" class="createField">
+@error('characterQuote')
+<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+@enderror
 <br>
 <br>
 <h2 class="createLabels mt-8">Upload a Character Image:</h2>
 <br>
 <input type="file" name="image_path" class="addImageField">
+@error('image_path')
+<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+@enderror
 <br>
 <br>
 <div class="flex justify-center inline-block mt-4">
@@ -49,6 +76,9 @@
 <option value="20thCentury">20th Century</option>
 <option value="lucasFilms">Lucasfilms</option>
 </select>
+@error('studio')
+<div class="alert-alert danger text-red text-center">{{ $message }}*</div>
+@enderror
 <br>
 <br>
 </div>
@@ -57,5 +87,7 @@
 <button type="submit" class="addButton">Submit</button>
 </div>
     </div>
+
+
 </form>
 @endsection 
