@@ -256,10 +256,12 @@
                       @else
                       <td class="UserTableRow3">User</td>     
                       @endif
+                      <td>
                       <div class="admin-user-controls">
                         <a class="editButton bg-lightGreen" href="/auth/{{ $user->name }}/edit">
                             <img src="../Images/pencil.png" alt="edit icon" width="30" height="50">
-                        </a>   
+                        </a> 
+                         
                     <form action="../auth/{{ $user->name }}" method="POST">
                     @csrf
                     @method('delete')
@@ -267,7 +269,8 @@
                         <img src="../Images/bin.png" alt="delete icon" width="30" height="50">
                     </button>
                     </form>
-                        </div>       
+                  </div>    
+                </td>    
                       </tr> 
                       @endforeach   
                       </table>  
