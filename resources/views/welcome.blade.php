@@ -198,11 +198,7 @@
                         </div>
 
                         <div class="p-6 ">
-                            <div class="flex items-center">
-                               
-
-                            </div>
-
+  
                             <div class="ml-12">
                                 <img src="Images\beautyAndTheBeast.jpg" class="rounded-md" width="300" height="200" alt="20th Century Studios Title Image">
                             </div>
