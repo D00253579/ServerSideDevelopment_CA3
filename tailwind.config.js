@@ -13,7 +13,8 @@ module.exports = {
       'lightBlue': '#eef2ff',
       'lightGreen': '#6ee7b7', 
       'lightRed': '#fca5a5',
-      'lightPink' : '#fbcfe8'
+      'lightPink' : '#fbcfe8',
+      'red' : '#dc2626'
     }
   },
   variants: {},
