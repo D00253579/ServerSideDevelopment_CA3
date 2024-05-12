@@ -25,7 +25,7 @@
                             name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                         @error('name')
-                        <p class="text-red-500 text-xs italic mt-4">
+                        <p class="alert-alert danger text-red text-center italic">
                             {{ $message }}
                         </p>
                         @enderror
@@ -41,7 +41,7 @@
                             value="{{ old('email') }}" required autocomplete="email">
 
                         @error('email')
-                        <p class="text-red-500 text-xs italic mt-4">
+                        <p class="alert-alert danger text-red text-center italic">
                             {{ $message }}
                         </p>
                         @enderror
@@ -57,7 +57,7 @@
                             required autocomplete="new-password">
 
                         @error('password')
-                        <p class="text-red-500 text-xs italic mt-4">
+                        <p class="alert-alert danger text-red text-center italic">
                             {{ $message }}
                         </p>
                         @enderror
