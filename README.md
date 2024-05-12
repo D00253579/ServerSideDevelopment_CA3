@@ -31,6 +31,12 @@ Password for administrator and user in database
 ```
 123!"£QWEqwe
 ```
+## User Authentication <br>
+Guest User: A guest user can only view data, this includes character and studios data. 
+
+Registered User: A registered user can view character and studios data, they can also create new characters. However, they can only edit and delete their own created characters, a user cannot edit or delete original characters. 
+
+Admin: An admin can perform all CRUD operations for characters including original characters and characters created by users. The admin can edit and delete existing studios. The admin can view all users, we attempted the edit and delete for users and included the code, however it is not working correctly.
 
 ## Jamie References <br>
 For this project, we utilised seeding to provide default data in the database so that we could test constantly thorughout development. I used Johan van den Broek's(2024) seeding article to learn how to create seeders that can be run after migrating the tables. As we had a date field in our studios table I had to use Carbon to create a date in the seeder. I used Chris Sev's(2021) article on how to use Carbon properly. As we were creating our authentication for admin and for users I found a informative tutorial on youtube by Career Development Lab(2022) on how to create proper authentication using middleware to design our tasks for both admin and user. To make the authentication easier I read Laravel's(No date) documentation on the default attribute and assigned a 0 to users whenever they register so that the middleware can make the distinction between user and admin. I also read up on Stackoverflow(2023) on how to delete a studio while avoiding a foreign key constraint. I also found out about the date input type as well.
