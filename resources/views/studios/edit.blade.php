@@ -4,7 +4,7 @@
 <div class="w-4/5 m-auto flex justify-center">
     <div class="py-15">
         <h1 class="text-6xl">
-            <img src="/Images/updateTitle.png" alt="Update Title Image" height="150" width="250">
+            <img src="/Images/updateStudioTitle.png" alt="Update Title Image" height="150" width="250">
         </h1>
     </div>
 </div>

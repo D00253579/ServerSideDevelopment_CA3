@@ -56,7 +56,7 @@
             @endif
             </nav>
             <div class="create-controls">
-                @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
+                @if (isset(Auth::user()->id) && Auth::user()->isAdmin==0)
                 <a class="createButton bg-lightPink" href="/characters/create"> 
                     <img src="Images\add.png" alt="Add Icon" width="30" height="50" class="mr-4">
                    <p class="text-lg font-serif uppercase font-bold mt-1">Create</p>
@@ -76,7 +76,7 @@
                     <h3 class="text-base font-serif">Movie: {{ $character->movieName }}</h3>
                     <h4 class="quote text-base font-serif mb-8 italic">"{{ $character ->characterQuote }}"</h4>  
                     {{-- Checks if user exists and that it is an Admin  --}}
-                    @if (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
+                    @if (isset(Auth::user()->id) && Auth::user()->isAdmin==0 && $character->id>9)
                     <div class="admin-user-controls">
                     <a class="editButton bg-lightGreen" href="/characters/{{ $character->characterName }}/edit">
                         <img src="Images\pencil.png" alt="edit icon" width="30" height="50">
@@ -89,6 +89,20 @@
                 </button>
                 </form>
                     </div>
+                    @elseif (isset(Auth::user()->id) && Auth::user()->isAdmin==1)
+                        <div class="admin-user-controls">
+                            <a class="editButton bg-lightGreen" href="/characters/{{ $character->characterName }}/edit">
+                                <img src="Images\pencil.png" alt="edit icon" width="30" height="50">
+                            </a>   
+                        <form action="/characters/{{ $character->characterName }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <button class='deleteButton bg-lightRed' type="submit">
+                            <img src="Images\bin.png" alt="delete icon" width="30" height="50">
+                        </button>
+                        </form>
+                            </div>  
+                    
                  @endif   
                     </div>    
                     </div>
