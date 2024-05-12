@@ -21,6 +21,34 @@ class HomeController extends Controller
     public function index()
     {
         return view('auth.home')
-        ->with('users',User::orderBy('updated_at', 'DESC')->get());
+        ->with('users',User::orderBy('name', 'ASC')->get());
+    }
+    public function edit($name){
+        return view('auth.edit')
+        ->with ('user',User::where('name',$name)->first());
+    }
+    public function update(Request $request, $name)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
+        User::where('name', $name)
+            ->update([
+                'name' => $request->input('name'),
+                'email' => $request->input('email'),
+                'password' => $request->input('password')
+                
+            ]);
+            
+            return redirect('auth.home');
+    }
+    public function destroy($name){
+        
+        $name=User::where('name',$name);
+        $name->delete();
+            return redirect('auth.home');
     }
 }
