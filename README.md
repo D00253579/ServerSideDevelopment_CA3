@@ -56,4 +56,10 @@ Sparkle button css: https://uiverse.io/JkHuger/fat-bat-0
 Icon images are from: https://www.flaticon.com/free-icon/add_12937056?term=create&page=1&position=78&origin=search&related_id=12937056
 Disney Font is from: https://www.fontspace.com/category/disney 
 
-I Used the Laravel website to read up on the data validation and sanitisation: https://laravel.com/docs/11.x/validation#preparing-input-for-validation 
+Websites I used for form validation and data sanitisation:
+https://laravel.com/docs/11.x/validation#preparing-input-for-validation 
+https://medium.com/@aiman.asfia/a-guide-to-understanding-and-utilizing-prepareforvalidation-in-laravel-926f156650d5
+
+Form Validation: 
+I included error messages to display below the input where the error has occured, I done this for the create and edit characters pages and also the edit studios page. 
+The login and register pages are also validated, for the login and register page the inputted email address will be checked to ensure the email does or does not already exist in the database. I have styled the error messages on the login and register pages also. 

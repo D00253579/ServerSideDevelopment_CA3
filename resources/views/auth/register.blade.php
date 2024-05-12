@@ -20,10 +20,8 @@
                         <label for="name" class="block text-darkBlue font-serif text-sm font-bold mb-2 sm:mb-4">
                             {{ __('Name') }}:
                         </label>
-
                         <input id="name" type="text" class="form-input w-full @error('name')  border-red-500 @enderror"
                             name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
                         @error('name')
                         <p class="alert-alert danger text-red text-center italic">
                             {{ $message }}

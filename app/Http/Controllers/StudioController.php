@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\disneyStudios;
 use App\Models\disneyCharacters;
+use Illuminate\Support\Str;
+
 class StudioController extends Controller
 {
     public function index()
@@ -13,6 +15,22 @@ class StudioController extends Controller
         return view('studios.index')
             ->with('studios', disneyStudios::orderBy('studioName', 'DESC')->get());
     }
+
+    
+    /**
+     *  Preparing studio data for validation - data sanitisation 
+     */
+    public function prepareForValidation(){
+        $this->merge(
+            [
+                'studioName' =>Str::studioName($this->studioName),
+                'founded' => date_format::founded($this->founded),
+                'president' => Str::president($this->president),
+                'location' => Str::location($this->location),            
+                ]
+            );
+    }
+
     public function edit($studioName){
         return view('studios.edit')
         ->with ('studio',disneyStudios::where('studioName',$studioName)->first());
